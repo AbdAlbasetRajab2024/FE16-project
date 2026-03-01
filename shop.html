@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - Restan Restaurant</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#d4af37',
+                        secondary: '#1a1a1a',
+                        accent: '#ff6b35',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-gray-800 antialiased bg-white">
+
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50 border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="border-b border-gray-200 py-3">
+                <div class="flex justify-between items-center text-sm">
+                    <div class="flex items-center gap-6 text-gray-600">
+                        <span><i class="fas fa-phone mr-2 text-primary"></i>Phone: +4733378901</span>
+                        <span><i class="fas fa-envelope mr-2 text-primary"></i>Email: food@restan.com</span>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="flex gap-4 text-gray-600">
+                            <a href="#" class="hover:text-primary transition-colors text-xl"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="hover:text-primary transition-colors text-xl"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="hover:text-primary transition-colors text-xl"><i class="fab fa-youtube"></i></a>
+                            <a href="#" class="hover:text-primary transition-colors text-xl"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                        <a href="#" class="text-gray-600 hover:text-primary transition-colors">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="ml-2">Cart (0)</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex-shrink-0">
+                    <img src="images/logo.png" alt="Restan" class="h-12">
+                </a>
+
+                <nav class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-600 font-medium hover:text-primary transition-colors">Home</a>
+                    <a href="pages.html" class="text-gray-600 font-medium hover:text-primary transition-colors">Pages</a>
+                    <a href="menu.html" class="text-gray-600 font-medium hover:text-primary transition-colors">Menu</a>
+                    <a href="blog.html" class="text-gray-600 font-medium hover:text-primary transition-colors">Blog</a>
+                    <a href="shop.html" class="text-gray-800 font-medium hover:text-primary transition-colors">Shop</a>
+                    <a href="index.html#contact" class="text-gray-600 font-medium hover:text-primary transition-colors">Contact Us</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <div class="bg-gradient-to-r from-primary via-amber-500 to-primary py-20 mb-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-5xl font-bold text-secondary mb-4">Our Shop</h1>
+            <p class="text-secondary/80 text-lg max-w-2xl mx-auto">Browse our exclusive merchandise and specialty products</p>
+        </div>
+    </div>
+
+    <!-- Shop Section -->
+    <section class="py-12 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Filters -->
+            <div class="flex flex-wrap justify-between items-center mb-12 gap-4">
+                <div class="flex flex-wrap gap-4">
+                    <select class="px-4 py-2 bg-white text-gray-800 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary outline-none">
+                        <option>All Categories</option>
+                        <option>Merchandise</option>
+                        <option>Sauces & Condiments</option>
+                        <option>Gift Cards</option>
+                    </select>
+                    <select class="px-4 py-2 bg-white text-gray-800 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary outline-none">
+                        <option>Sort by: Featured</option>
+                        <option>Price: Low to High</option>
+                        <option>Price: High to Low</option>
+                        <option>Newest</option>
+                    </select>
+                </div>
+                <div class="text-gray-600">Showing 1-6 of 12 results</div>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Product 1 -->
+                <div class="bg-white rounded-2xl overflow-hidden hover:transform hover:-translate-y-2 transition-all border border-gray-200 shadow-md hover:shadow-xl">
+                    <div class="h-64 bg-gray-100 flex items-center justify-center p-8">
+                        <img src="images/mobile.png" alt="Restan T-Shirt" class="max-h-full max-w-full object-contain">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-2">
+                            <div class="flex text-primary text-sm">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="text-gray-600 text-sm">(48 reviews)</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Restan Mobile App</h3>
+                        <p class="text-gray-600 text-sm mb-4">Order on the go with our mobile app</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-primary font-bold text-2xl">FREE</span>
+                            <button class="bg-primary hover:bg-primary/90 text-secondary px-6 py-2 rounded-lg font-semibold transition-colors">
+                                Download
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="bg-white rounded-2xl overflow-hidden hover:transform hover:-translate-y-2 transition-all border border-gray-200 shadow-md hover:shadow-xl">
+                    <div class="h-64 bg-gray-100 flex items-center justify-center p-8">
+                        <div class="w-32 h-32 bg-primary rounded-lg flex items-center justify-center text-secondary text-4xl font-bold">GIFT</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-2">
+                            <div class="flex text-primary text-sm">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-gray-600 text-sm">(120 reviews)</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Gift Card - $50</h3>
+                        <p class="text-gray-600 text-sm mb-4">Perfect gift for food lovers</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-primary font-bold text-2xl">$50.00</span>
+                            <button class="bg-primary hover:bg-primary/90 text-secondary px-6 py-2 rounded-lg font-semibold transition-colors">
+                                Buy Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="bg-white rounded-2xl overflow-hidden hover:transform hover:-translate-y-2 transition-all border border-gray-200 shadow-md hover:shadow-xl">
+                    <div class="h-64 bg-gray-100 flex items-center justify-center p-8">
+                        <div class="w-24 h-40 bg-gradient-to-b from-amber-600 to-amber-400 rounded-lg flex items-center justify-center text-secondary font-bold">
+                            SAUCE
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-2">
+                            <div class="flex text-primary text-sm">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <span class="text-gray-600 text-sm">(85 reviews)</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Signature Hot Sauce</h3>
+                        <p class="text-gray-600 text-sm mb-4">Our famous homemade hot sauce</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-primary font-bold text-2xl">$12.99</span>
+                            <button class="bg-primary hover:bg-primary/90 text-secondary px-6 py-2 rounded-lg font-semibold transition-colors">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="bg-white rounded-2xl overflow-hidden hover:transform hover:-translate-y-2 transition-all border border-gray-200 shadow-md hover:shadow-xl">
+                    <div class="h-64 bg-gray-100 flex items-center justify-center p-8">
+                        <div class="w-32 h-32 bg-primary rounded-full flex items-center justify-center text-secondary text-3xl font-bold">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-2">
+                            <div class="flex text-primary text-sm">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-gray-600 text-sm">(65 reviews)</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Restan Chef's Apron</h3>
+                        <p class="text-gray-600 text-sm mb-4">Professional quality kitchen apron</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-primary font-bold text-2xl">$29.99</span>
+                            <button class="bg-primary hover:bg-primary/90 text-secondary px-6 py-2 rounded-lg font-semibold transition-colors">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="bg-white rounded-2xl overflow-hidden hover:transform hover:-translate-y-2 transition-all border border-gray-200 shadow-md hover:shadow-xl">
+                    <div class="h-64 bg-gray-100 flex items-center justify-center p-8">
+                        <div class="w-32 h-32 bg-gradient-to-br from-primary to-amber-400 rounded-lg flex items-center justify-center text-secondary font-bold text-lg">
+                            COOKBOOK
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-2">
+                            <div class="flex text-primary text-sm">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-gray-600 text-sm">(230 reviews)</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Restan Cookbook</h3>
+                        <p class="text-gray-600 text-sm mb-4">150+ authentic recipes from our kitchen</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-primary font-bold text-2xl">$39.99</span>
+                            <button class="bg-primary hover:bg-primary/90 text-secondary px-6 py-2 rounded-lg font-semibold transition-colors">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="bg-white rounded-2xl overflow-hidden hover:transform hover:-translate-y-2 transition-all border border-gray-200 shadow-md hover:shadow-xl">
+                    <div class="h-64 bg-gray-100 flex items-center justify-center p-8">
+                        <div class="w-32 h-32 bg-secondary rounded-full flex items-center justify-center border-4 border-primary">
+                            <span class="text-primary text-4xl font-bold">R</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-2">
+                            <div class="flex text-primary text-sm">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <span class="text-gray-600 text-sm">(42 reviews)</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Restan Logo Hat</h3>
+                        <p class="text-gray-600 text-sm mb-4">Classic embroidered baseball cap</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-primary font-bold text-2xl">$24.99</span>
+                            <button class="bg-primary hover:bg-primary/90 text-secondary px-6 py-2 rounded-lg font-semibold transition-colors">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="flex justify-center mt-12 gap-2">
+                <button class="px-4 py-2 bg-white text-gray-800 rounded hover:bg-primary hover:text-secondary transition-colors border border-gray-300">Previous</button>
+                <button class="px-4 py-2 bg-primary text-secondary rounded font-bold">1</button>
+                <button class="px-4 py-2 bg-white text-gray-800 rounded hover:bg-primary hover:text-secondary transition-colors border border-gray-300">2</button>
+                <button class="px-4 py-2 bg-white text-gray-800 rounded hover:bg-primary hover:text-secondary transition-colors border border-gray-300">Next</button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="border-t border-gray-800 pt-8 text-center">
+                <p class="text-gray-400 text-sm">&copy; 2026 Restan Restaurant. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

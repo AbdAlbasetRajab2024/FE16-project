@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Restan Restaurant</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#d4af37',
+                        secondary: '#1a1a1a',
+                        accent: '#ff6b35',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-gray-800 antialiased bg-white">
+
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50 border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="border-b border-gray-200 py-3">
+                <div class="flex justify-between items-center text-sm">
+                    <div class="flex items-center gap-6 text-gray-600">
+                        <span><i class="fas fa-phone mr-2 text-primary"></i>Phone: +4733378901</span>
+                        <span><i class="fas fa-envelope mr-2 text-primary"></i>Email: food@restan.com</span>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="flex gap-4 text-gray-600">
+                            <a href="#" class="hover:text-primary transition-colors text-xl"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="hover:text-primary transition-colors text-xl"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="hover:text-primary transition-colors text-xl"><i class="fab fa-youtube"></i></a>
+                            <a href="#" class="hover:text-primary transition-colors text-xl"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex-shrink-0">
+                    <img src="images/logo.png" alt="Restan" class="h-12">
+                </a>
+
+                <nav class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-600 font-medium hover:text-primary transition-colors">Home</a>
+                    <a href="pages.html" class="text-gray-600 font-medium hover:text-primary transition-colors">Pages</a>
+                    <a href="menu.html" class="text-gray-600 font-medium hover:text-primary transition-colors">Menu</a>
+                    <a href="blog.html" class="text-gray-800 font-medium hover:text-primary transition-colors">Blog</a>
+                    <a href="shop.html" class="text-gray-600 font-medium hover:text-primary transition-colors">Shop</a>
+                    <a href="index.html#contact" class="text-gray-600 font-medium hover:text-primary transition-colors">Contact Us</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <div class="bg-gradient-to-r from-primary via-amber-500 to-primary py-20 mb-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-5xl font-bold text-secondary mb-4">Our Blog</h1>
+            <p class="text-secondary/80 text-lg max-w-2xl mx-auto">Latest news, recipes, and culinary stories</p>
+        </div>
+    </div>
+
+    <!-- Blog Section -->
+    <section class="py-12 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <style>
+                .blog-page { display: none; }
+                #page1:target ~ .blog-pages .blog-page.page-1,
+                #page2:target ~ .blog-pages .blog-page.page-2,
+                #page3:target ~ .blog-pages .blog-page.page-3 { display: grid; }
+                :not(#page1):not(#page2):not(#page3):target ~ .blog-pages .blog-page.page-1,
+                body:not(:has(:target)) .blog-page.page-1 { display: grid; }
+            </style>
+            <span id="page1"></span>
+            <span id="page2"></span>
+            <span id="page3"></span>
+            
+            <div class="blog-pages">
+            <div class="blog-page page-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Blog Post 1 -->
+                <article class="bg-white rounded-2xl overflow-hidden hover:transform hover:-translate-y-2 transition-all border border-gray-200 shadow-md hover:shadow-xl">
+                    <div class="h-56 overflow-hidden">
+                        <img src="images/news1.jpg" alt="Blog" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-4 text-sm text-gray-500 mb-3">
+                            <span><i class="far fa-calendar mr-2"></i>Feb 15, 2026</span>
+                            <span><i class="far fa-user mr-2"></i>Admin</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 hover:text-primary transition-colors cursor-pointer">
+                            The Secret Behind Our Signature Dishes
+                        </h3>
+                        <p class="text-gray-600 mb-4">
+                            Discover the techniques and ingredients that make our cuisine truly special and unforgettable.
+                        </p>
+                        <a href="#" class="text-primary font-semibold hover:text-primary/80 transition-colors">
+                            Read More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 2 -->
+                <article class="bg-white rounded-2xl overflow-hidden hover:transform hover:-translate-y-2 transition-all border border-gray-200 shadow-md hover:shadow-xl">
+                    <div class="h-56 overflow-hidden">
+                        <img src="images/news2.jpg" alt="Blog" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-4 text-sm text-gray-500 mb-3">
+                            <span><i class="far fa-calendar mr-2"></i>Feb 10, 2026</span>
+                            <span><i class="far fa-user mr-2"></i>Chef Maria</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 hover:text-primary transition-colors cursor-pointer">
+                            Farm to Table: Our Fresh Ingredients Journey
+                        </h3>
+                        <p class="text-gray-600 mb-4">
+                            Learn about our partnerships with local farms and how we source the freshest ingredients daily.
+                        </p>
+                        <a href="#" class="text-primary font-semibold hover:text-primary/80 transition-colors">
+                            Read More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 3 -->
+                <article class="bg-white rounded-2xl overflow-hidden hover:transform hover:-translate-y-2 transition-all border border-gray-200 shadow-md hover:shadow-xl">
+                    <div class="h-56 overflow-hidden">
+                        <img src="images/dish1.png" alt="Blog" class="w-full h-full object-cover bg-gray-100">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-4 text-sm text-gray-500 mb-3">
+                            <span><i class="far fa-calendar mr-2"></i>Feb 5, 2026</span>
+                            <span><i class="far fa-user mr-2"></i>Chef Gordon</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 hover:text-primary transition-colors cursor-pointer">
+                            Mastering the Art of Perfect Pasta
+                        </h3>
+                        <p class="text-gray-600 mb-4">
+                            A deep dive into the techniques that transform simple pasta into an extraordinary culinary experience.
+                        </p>
+                        <a href="#" class="text-primary font-semibold hover:text-primary/80 transition-colors">
+                            Read More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 4 -->
+                <article class="bg-white rounded-2xl overflow-hidden hover:transform hover:-translate-y-2 transition-all border border-gray-200 shadow-md hover:shadow-xl">
+                    <div class="h-56 overflow-hidden">
+                        <img src="images/dish2.png" alt="Blog" class="w-full h-full object-cover bg-gray-100">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-4 text-sm text-gray-500 mb-3">
+                            <span><i class="far fa-calendar mr-2"></i>Jan 28, 2026</span>
+                            <span><i class="far fa-user mr-2"></i>Admin</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 hover:text-primary transition-colors cursor-pointer">
+                            Celebrating 160 Years of Culinary Excellence
+                        </h3>
+                        <p class="text-gray-600 mb-4">
+                            A look back at our rich history and the traditions that continue to inspire our kitchen today.
+                        </p>
+                        <a href="#" class="text-primary font-semibold hover:text-primary/80 transition-colors">
+                            Read More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 5 -->
+                <article class="bg-white rounded-2xl overflow-hidden hover:transform hover:-translate-y-2 transition-all border border-gray-200 shadow-md hover:shadow-xl">
+                    <div class="h-56 overflow-hidden">
+                        <img src="images/salmon-fry.jpg" alt="Blog" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-4 text-sm text-gray-500 mb-3">
+                            <span><i class="far fa-calendar mr-2"></i>Jan 20, 2026</span>
+                            <span><i class="far fa-user mr-2"></i>Chef James</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 hover:text-primary transition-colors cursor-pointer">
+                            Sustainable Seafood: Our Commitment
+                        </h3>
+                        <p class="text-gray-600 mb-4">
+                            How we ensure every seafood dish supports ocean health and sustainable fishing practices.
+                        </p>
+                        <a href="#" class="text-primary font-semibold hover:text-primary/80 transition-colors">
+                            Read More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 6 -->
+                <article class="bg-white rounded-2xl overflow-hidden hover:transform hover:-translate-y-2 transition-all border border-gray-200 shadow-md hover:shadow-xl">
+                    <div class="h-56 overflow-hidden">
+                        <img src="images/cheesecakes.jpg" alt="Blog" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-4 text-sm text-gray-500 mb-3">
+                            <span><i class="far fa-calendar mr-2"></i>Jan 15, 2026</span>
+                            <span><i class="far fa-user mr-2"></i>Chef Maria</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 hover:text-primary transition-colors cursor-pointer">
+                            Dessert Heaven: Behind the Sweetness
+                        </h3>
+                        <p class="text-gray-600 mb-4">
+                            Meet our pastry chef and explore the creative process behind our most beloved desserts.
+                        </p>
+                        <a href="#" class="text-primary font-semibold hover:text-primary/80 transition-colors">
+                            Read More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Page 2 Articles -->
+            <div class="blog-page page-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Blog Post 1 Page 2-->
+                <article class="bg-white rounded-2xl overflow-hidden hover:transform hover:-translate-y-2 transition-all border border-gray-200 shadow-md hover:shadow-xl">
+                    <div class="h-56 overflow-hidden">
+                        <img src="images/burger.png" alt="Blog" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-4 text-sm text-gray-500 mb-3">
+                            <span><i class="far fa-calendar mr-2"></i>Jan 10, 2026</span>
+                            <span><i class="far fa-user mr-2"></i>Chef Gordon</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 hover:text-primary transition-colors cursor-pointer">
+                            The Art of Burger Making
+                        </h3>
+                        <p class="text-gray-600 mb-4">
+                            Discover the secrets behind crafting the perfect burger with quality ingredients.
+                        </p>
+                        <a href="#" class="text-primary font-semibold hover:text-primary/80 transition-colors">
+                            Read More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 2 Page 2-->
+                <article class="bg-white rounded-2xl overflow-hidden hover:transform hover:-translate-y-2 transition-all border border-gray-200 shadow-md hover:shadow-xl">
+                    <div class="h-56 overflow-hidden">
+                        <img src="images/pizza.png" alt="Blog" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-4 text-sm text-gray-500 mb-3">
+                            <span><i class="far fa-calendar mr-2"></i>Jan 5, 2026</span>
+                            <span><i class="far fa-user mr-2"></i>Chef Maria</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 hover:text-primary transition-colors cursor-pointer">
+                            Pizza Perfection: Italian Techniques
+                        </h3>
+                        <p class="text-gray-600 mb-4">
+                            Learn authentic Italian pizza-making techniques from our master chef.
+                        </p>
+                        <a href="#" class="text-primary font-semibold hover:text-primary/80 transition-colors">
+                            Read More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 3 Page 2-->
+                <article class="bg-white rounded-2xl overflow-hidden hover:transform hover:-translate-y-2 transition-all border border-gray-200 shadow-md hover:shadow-xl">
+                    <div class="h-56 overflow-hidden">
+                        <img src="images/hot-chocolate.jpg" alt="Blog" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-4 text-sm text-gray-500 mb-3">
+                            <span><i class="far fa-calendar mr-2"></i>Dec 30, 2025</span>
+                            <span><i class="far fa-user mr-2"></i>Chef Maria</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 hover:text-primary transition-colors cursor-pointer">
+                            Winter Warmers: Hot Chocolate Guide
+                        </h3>
+                        <p class="text-gray-600 mb-4">
+                            Perfect hot chocolate recipes for cold winter nights.
+                        </p>
+                        <a href="#" class="text-primary font-semibold hover:text-primary/80 transition-colors">
+                            Read More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 4 Page 2-->
+                <article class="bg-white rounded-2xl overflow-hidden hover:transform hover:-translate-y-2 transition-all border border-gray-200 shadow-md hover:shadow-xl">
+                    <div class="h-56 overflow-hidden">
+                        <img src="images/bestRes.jpg" alt="Blog" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-4 text-sm text-gray-500 mb-3">
+                            <span><i class="far fa-calendar mr-2"></i>Dec 25, 2025</span>
+                            <span><i class="far fa-user mr-2"></i>Admin</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 hover:text-primary transition-colors cursor-pointer">
+                            Restaurant Interior Design Tips
+                        </h3>
+                        <p class="text-gray-600 mb-4">
+                            Creating the perfect ambiance for memorable dining experiences.
+                        </p>
+                        <a href="#" class="text-primary font-semibold hover:text-primary/80 transition-colors">
+                            Read More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 5 Page 2-->
+                <article class="bg-white rounded-2xl overflow-hidden hover:transform hover:-translate-y-2 transition-all border border-gray-200 shadow-md hover:shadow-xl">
+                    <div class="h-56 overflow-hidden">
+                        <img src="images/chef.jpg" alt="Blog" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-4 text-sm text-gray-500 mb-3">
+                            <span><i class="far fa-calendar mr-2"></i>Dec 20, 2025</span>
+                            <span><i class="far fa-user mr-2"></i>Chef Gordon</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 hover:text-primary transition-colors cursor-pointer">
+                            Behind the Kitchen: Chef's Daily Routine
+                        </h3>
+                        <p class="text-gray-600 mb-4">
+                            A day in the life of our head chef and his culinary adventures.
+                        </p>
+                        <a href="#" class="text-primary font-semibold hover:text-primary/80 transition-colors">
+                            Read More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 6 Page 2-->
+                <article class="bg-white rounded-2xl overflow-hidden hover:transform hover:-translate-y-2 transition-all border border-gray-200 shadow-md hover:shadow-xl">
+                    <div class="h-56 overflow-hidden">
+                        <img src="images/chef-cook.jpg" alt="Blog" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-4 text-sm text-gray-500 mb-3">
+                            <span><i class="far fa-calendar mr-2"></i>Dec 15, 2025</span>
+                            <span><i class="far fa-user mr-2"></i>Admin</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 hover:text-primary transition-colors cursor-pointer">
+                            Cooking Classes Now Available
+                        </h3>
+                        <p class="text-gray-600 mb-4">
+                            Join our professional cooking classes and learn from the best.
+                        </p>
+                        <a href="#" class="text-primary font-semibold hover:text-primary/80 transition-colors">
+                            Read More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Page 3 Articles -->
+            <div class="blog-page page-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Blog Post 1 Page 3-->
+                <article class="bg-white rounded-2xl overflow-hidden hover:transform hover:-translate-y-2 transition-all border border-gray-200 shadow-md hover:shadow-xl">
+                    <div class="h-56 overflow-hidden">
+                        <img src="images/dish3.png" alt="Blog" class="w-full h-full object-cover bg-gray-100">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-4 text-sm text-gray-500 mb-3">
+                            <span><i class="far fa-calendar mr-2"></i>Dec 10, 2025</span>
+                            <span><i class="far fa-user mr-2"></i>Chef James</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 hover:text-primary transition-colors cursor-pointer">
+                            Healthy Eating in 2026
+                        </h3>
+                        <p class="text-gray-600 mb-4">
+                            New year, new healthy menu options to start your fitness journey.
+                        </p>
+                        <a href="#" class="text-primary font-semibold hover:text-primary/80 transition-colors">
+                            Read More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 2 Page 3-->
+                <article class="bg-white rounded-2xl overflow-hidden hover:transform hover:-translate-y-2 transition-all border border-gray-200 shadow-md hover:shadow-xl">
+                    <div class="h-56 overflow-hidden">
+                        <img src="images/chicken_alferdo.jpg" alt="Blog" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-4 text-sm text-gray-500 mb-3">
+                            <span><i class="far fa-calendar mr-2"></i>Dec 5, 2025</span>
+                            <span><i class="far fa-user mr-2"></i>Chef Maria</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 hover:text-primary transition-colors cursor-pointer">
+                            Pasta Sauces: A Complete Guide
+                        </h3>
+                        <p class="text-gray-600 mb-4">
+                            Everything you need to know about making perfect pasta sauces at home.
+                        </p>
+                        <a href="#" class="text-primary font-semibold hover:text-primary/80 transition-colors">
+                            Read More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 3 Page 3-->
+                <article class="bg-white rounded-2xl overflow-hidden hover:transform hover:-translate-y-2 transition-all border border-gray-200 shadow-md hover:shadow-xl">
+                    <div class="h-56 overflow-hidden">
+                        <img src="images/news3.jpg" alt="Blog" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-4 text-sm text-gray-500 mb-3">
+                            <span><i class="far fa-calendar mr-2"></i>Nov 30, 2025</span>
+                            <span><i class="far fa-user mr-2"></i>Admin</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 hover:text-primary transition-colors cursor-pointer">
+                            Customer Appreciation Month
+                        </h3>
+                        <p class="text-gray-600 mb-4">
+                            Thank you for your continued support! Special offers all month long.
+                        </p>
+                        <a href="#" class="text-primary font-semibold hover:text-primary/80 transition-colors">
+                            Read More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 4 Page 3-->
+                <article class="bg-white rounded-2xl overflow-hidden hover:transform hover:-translate-y-2 transition-all border border-gray-200 shadow-md hover:shadow-xl">
+                    <div class="h-56 overflow-hidden">
+                        <img src="images/bestDish.jpg" alt="Blog" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-4 text-sm text-gray-500 mb-3">
+                            <span><i class="far fa-calendar mr-2"></i>Nov 25, 2025</span>
+                            <span><i class="far fa-user mr-2"></i>Chef Gordon</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 hover:text-primary transition-colors cursor-pointer">
+                            Award-Winning Dishes of 2025
+                        </h3>
+                        <p class="text-gray-600 mb-4">
+                            Celebrating our achievements and the dishes that earned us recognition.
+                        </p>
+                        <a href="#" class="text-primary font-semibold hover:text-primary/80 transition-colors">
+                            Read More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 5 Page 3-->
+                <article class="bg-white rounded-2xl overflow-hidden hover:transform hover:-translate-y-2 transition-all border border-gray-200 shadow-md hover:shadow-xl">
+                    <div class="h-56 overflow-hidden">
+                        <img src="images/chef2.jpg" alt="Blog" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-4 text-sm text-gray-500 mb-3">
+                            <span><i class="far fa-calendar mr-2"></i>Nov 20, 2025</span>
+                            <span><i class="far fa-user mr-2"></i>Chef James</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 hover:text-primary transition-colors cursor-pointer">
+                            Meet Our New Sous Chef
+                        </h3>
+                        <p class="text-gray-600 mb-4">
+                            Welcoming a talented new member to our culinary team.
+                        </p>
+                        <a href="#" class="text-primary font-semibold hover:text-primary/80 transition-colors">
+                            Read More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 6 Page 3-->
+                <article class="bg-white rounded-2xl overflow-hidden hover:transform hover:-translate-y-2 transition-all border border-gray-200 shadow-md hover:shadow-xl">
+                    <div class="h-56 overflow-hidden">
+                        <img src="images/news4.jpg" alt="Blog" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-4 text-sm text-gray-500 mb-3">
+                            <span><i class="far fa-calendar mr-2"></i>Nov 15, 2025</span>
+                            <span><i class="far fa-user mr-2"></i>Admin</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 hover:text-primary transition-colors cursor-pointer">
+                            Thanksgiving Special Menu
+                        </h3>
+                        <p class="text-gray-600 mb-4">
+                            Join us for a special Thanksgiving celebration with exclusive dishes.
+                        </p>
+                        <a href="#" class="text-primary font-semibold hover:text-primary/80 transition-colors">
+                            Read More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="flex justify-center mt-12 gap-2">
+                <a href="#page1" class="px-4 py-2 bg-white text-gray-800 rounded hover:bg-primary hover:text-secondary transition-colors border border-gray-300 inline-block">Previous</a>
+                <a href="#page1" class="px-4 py-2 bg-primary text-secondary rounded font-bold inline-block">1</a>
+                <a href="#page2" class="px-4 py-2 bg-white text-gray-800 rounded hover:bg-primary hover:text-secondary transition-colors border border-gray-300 inline-block">2</a>
+                <a href="#page3" class="px-4 py-2 bg-white text-gray-800 rounded hover:bg-primary hover:text-secondary transition-colors border border-gray-300 inline-block">3</a>
+                <a href="#page2" class="px-4 py-2 bg-white text-gray-800 rounded hover:bg-primary hover:text-secondary transition-colors border border-gray-300 inline-block">Next</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="border-t border-gray-800 pt-8 text-center">
+                <p class="text-gray-500 text-sm">&copy; 2026 Restan Restaurant. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

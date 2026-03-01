@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Restan Restaurant</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#d4af37',
+                        secondary: '#1a1a1a',
+                        accent: '#ff6b35',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-gray-800 antialiased bg-white">
+
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50 border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="border-b border-gray-200 py-3">
+                <div class="flex justify-between items-center text-sm">
+                    <div class="flex items-center gap-6 text-gray-600">
+                        <span><i class="fas fa-phone mr-2 text-primary"></i>Phone: +4733378901</span>
+                        <span><i class="fas fa-envelope mr-2 text-primary"></i>Email: food@restan.com</span>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="flex gap-4 text-gray-600">
+                            <a href="#" class="hover:text-primary transition-colors text-xl"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="hover:text-primary transition-colors text-xl"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="hover:text-primary transition-colors text-xl"><i class="fab fa-youtube"></i></a>
+                            <a href="#" class="hover:text-primary transition-colors text-xl"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex-shrink-0">
+                    <img src="images/logo.png" alt="Restan" class="h-12">
+                </a>
+
+                <nav class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-600 font-medium hover:text-primary transition-colors">Home</a>
+                    <a href="pages.html" class="text-gray-600 font-medium hover:text-primary transition-colors">Pages</a>
+                    <a href="menu.html" class="text-gray-800 font-medium hover:text-primary transition-colors">Menu</a>
+                    <a href="blog.html" class="text-gray-600 font-medium hover:text-primary transition-colors">Blog</a>
+                    <a href="shop.html" class="text-gray-600 font-medium hover:text-primary transition-colors">Shop</a>
+                    <a href="index.html#contact" class="text-gray-600 font-medium hover:text-primary transition-colors">Contact Us</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <div class="bg-gradient-to-r from-primary via-amber-500 to-primary py-20 mb-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-5xl font-bold text-secondary mb-4">Our Menu</h1>
+            <p class="text-secondary/80 text-lg max-w-2xl mx-auto">Explore our delicious selection of carefully crafted dishes</p>
+        </div>
+    </div>
+
+    <!-- Menu Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Menu Categories -->
+            <style>
+                .menu-item { display: none; }
+                .menu-item.active { display: block; }
+                #all:target ~ #menu-grid .menu-item,
+                #burgers:target ~ #menu-grid .burger,
+                #pizza:target ~ #menu-grid .pizza,
+                #seafood:target ~ #menu-grid .seafood,
+                #pasta:target ~ #menu-grid .pasta,
+                #desserts:target ~ #menu-grid .dessert { display: block; }
+                :not(:target) ~ #menu-grid .menu-item { display: block; }
+            </style>
+            <span id="all"></span>
+            <span id="burgers"></span>
+            <span id="pizza"></span>
+            <span id="seafood"></span>
+            <span id="pasta"></span>
+            <span id="desserts"></span>
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <a href="#all" class="px-6 py-2 bg-primary text-secondary rounded-full font-semibold hover:bg-primary/90 transition-colors inline-block">All Items</a>
+                <a href="#burgers" class="px-6 py-2 bg-white text-gray-800 rounded-full hover:bg-primary hover:text-secondary transition-colors border border-gray-300 inline-block">Burgers</a>
+                <a href="#pizza" class="px-6 py-2 bg-white text-gray-800 rounded-full hover:bg-primary hover:text-secondary transition-colors border border-gray-300 inline-block">Pizza</a>
+                <a href="#seafood" class="px-6 py-2 bg-white text-gray-800 rounded-full hover:bg-primary hover:text-secondary transition-colors border border-gray-300 inline-block">Seafood</a>
+                <a href="#pasta" class="px-6 py-2 bg-white text-gray-800 rounded-full hover:bg-primary hover:text-secondary transition-colors border border-gray-300 inline-block">Pasta</a>
+                <a href="#desserts" class="px-6 py-2 bg-white text-gray-800 rounded-full hover:bg-primary hover:text-secondary transition-colors border border-gray-300 inline-block">Desserts</a>
+            </div>
+
+            <!-- Menu Grid -->
+            <div id="menu-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Item 1 -->
+                <div class="menu-item burger bg-white rounded-2xl overflow-hidden hover:transform hover:-translate-y-2 transition-all border border-gray-200 shadow-md hover:shadow-xl">
+                    <div class="h-56 overflow-hidden">
+                        <img src="images/burger.png" alt="Burger" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-2xl font-bold text-gray-900">Classic Burger</h3>
+                            <span class="text-primary font-bold text-xl">$12.99</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Juicy beef patty with fresh vegetables, lettuce, tomato, and special sauce</p>
+                        <button class="w-full bg-primary hover:bg-primary/90 text-secondary py-3 rounded-lg font-bold transition-colors">
+                            <i class="fas fa-shopping-cart mr-2"></i>Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="menu-item pizza bg-white rounded-2xl overflow-hidden hover:transform hover:-translate-y-2 transition-all border border-gray-200 shadow-md hover:shadow-xl">
+                    <div class="h-56 overflow-hidden">
+                        <img src="images/pizza.png" alt="Pizza" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-2xl font-bold text-gray-900">Italian Pizza</h3>
+                            <span class="text-primary font-bold text-xl">$15.99</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Hand-tossed pizza with mozzarella, basil, and premium Italian toppings</p>
+                        <button class="w-full bg-primary hover:bg-primary/90 text-secondary py-3 rounded-lg font-bold transition-colors">
+                            <i class="fas fa-shopping-cart mr-2"></i>Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="menu-item seafood bg-white rounded-2xl overflow-hidden hover:transform hover:-translate-y-2 transition-all border border-gray-200 shadow-md hover:shadow-xl">
+                    <div class="h-56 overflow-hidden">
+                        <img src="images/salmon-fry.jpg" alt="Salmon" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-2xl font-bold text-gray-900">Salmon Fry</h3>
+                            <span class="text-primary font-bold text-xl">$22.99</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Fresh Atlantic salmon, pan-seared with aromatic herbs and spices</p>
+                        <button class="w-full bg-primary hover:bg-primary/90 text-secondary py-3 rounded-lg font-bold transition-colors">
+                            <i class="fas fa-shopping-cart mr-2"></i>Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="menu-item pasta bg-white rounded-2xl overflow-hidden hover:transform hover:-translate-y-2 transition-all border border-gray-200 shadow-md hover:shadow-xl">
+                    <div class="h-56 overflow-hidden">
+                        <img src="images/chicken_alferdo.jpg" alt="Chicken Alfredo" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-2xl font-bold text-gray-900">Chicken Alfredo</h3>
+                            <span class="text-primary font-bold text-xl">$18.99</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Creamy alfredo sauce with grilled chicken over fresh fettuccine</p>
+                        <button class="w-full bg-primary hover:bg-primary/90 text-secondary py-3 rounded-lg font-bold transition-colors">
+                            <i class="fas fa-shopping-cart mr-2"></i>Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="menu-item dessert bg-white rounded-2xl overflow-hidden hover:transform hover:-translate-y-2 transition-all border border-gray-200 shadow-md hover:shadow-xl">
+                    <div class="h-56 overflow-hidden">
+                        <img src="images/cheesecakes.jpg" alt="Cheesecake" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-2xl font-bold text-gray-900">Cheesecake</h3>
+                            <span class="text-primary font-bold text-xl">$8.99</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Rich and creamy New York style cheesecake with berry compote</p>
+                        <button class="w-full bg-primary hover:bg-primary/90 text-secondary py-3 rounded-lg font-bold transition-colors">
+                            <i class="fas fa-shopping-cart mr-2"></i>Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Item 6 -->
+                <div class="menu-item dessert bg-white rounded-2xl overflow-hidden hover:transform hover:-translate-y-2 transition-all border border-gray-200 shadow-md hover:shadow-xl">
+                    <div class="h-56 overflow-hidden">
+                        <img src="images/hot-chocolate.jpg" alt="Hot Chocolate" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-2xl font-bold text-gray-900">Hot Chocolate</h3>
+                            <span class="text-primary font-bold text-xl">$5.99</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Premium Belgian chocolate with whipped cream and marshmallows</p>
+                        <button class="w-full bg-primary hover:bg-primary/90 text-secondary py-3 rounded-lg font-bold transition-colors">
+                            <i class="fas fa-shopping-cart mr-2"></i>Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8 border-t border-gray-800 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="border-t border-gray-800 pt-8 text-center">
+                <p class="text-gray-500 text-sm">&copy; 2026 Restan Restaurant. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
